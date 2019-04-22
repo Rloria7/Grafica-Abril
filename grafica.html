@@ -1,0 +1,117 @@
+﻿<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <title>Salidas Fiscal</title>
+</head>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<style>
+  body{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+  footer{
+    margin-top: 5px;
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    position: absolute;
+    text-align:center;
+    color:#41df1a;
+    font-size: 20px;
+  }
+button{
+  width: %;
+}
+  span{
+  color: #1358de;
+  }
+  span:hover{
+   color:green;
+  }
+  .container
+  {
+    margin-bottom: auto;
+    color: #262626;
+  }
+
+</style>
+<script>
+   google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(segundoGrafico);
+   google.setOnLoadCallback(drawdibujarGrafico);
+   function dibujarGrafico() {
+     // Tabla de datos: valores y etiquetas de la gr�fica
+     var data = google.visualization.arrayToDataTable([
+       //['Griffith', 'Bultos'],
+       //['1,438 Pablo M', 1438],
+       //['469 Diversey', 469],
+        //['3,140 Johnson', 3140],
+      // ['18,458 Griffith', 18458],
+       //['7,601 Ecolab', 7601],
+      // ['803 Cryovac', 803],
+       //['43 Vinos', 43],..
+        //['1,518 GBB', 1518],
+       //['329 Mafe', 329],
+      // ['4 Allergan', 4],
+      //  ['180 Abbott', 180],..
+     ]);
+     var options = {
+       title: 'Salidas Fiscal DHL total'
+     }
+     // Dibujar el gr�fico
+     new google.visualization.columnChart(
+     //ColumnChart ser�a el tipo de gr�fico a dibujar
+       document.getElementById('GraficoGoogleChart-ejemplo-1')
+     ).draw(data, options);
+   }
+
+
+
+   google.load("visualization", "2", {packages:["corechart"]});
+   google.setOnLoadCallback(segundoGrafico);
+   function segundoGrafico() {
+     // Tabla de datos: valores y etiquetas de la gr�fica
+     var data = google.visualization.arrayToDataTable([
+       ['Griffith', ''],
+       ['8,711 Griffith', 8711],
+       ['864 Ecolab', 864],
+       ['1,392 Cryovac', 1392],
+       ['43 Vinos', 43],
+	['839  Felipe M', 839],
+	['2,762 Johnson', 2762],
+       ['2 Allergan', 2],
+	 ['1,360 Calvo', 1360],
+        ['180 Abbott', 180],
+     ]);
+     var options = {
+       title: 'Salidas Fiscal DHL 16,153'
+     }
+     // Dibujar el gr�fico
+     new google.visualization.ColumnChart(
+     //ColumnChart ser�a el tipo de gr�fico a dibujar
+       document.getElementById('GraficoGoogleChart-ejemplo-2')
+     ).draw(data, options);
+   }
+ </script>
+
+<body>
+  <footer>
+    <div class="container shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+      </div>
+    <button type="button" class="btn btn-outline-primary">&copy;Ricardo 2019</button>
+      <span></span>
+    </div>
+  </footer>
+<div id="GraficoGoogleChart-ejemplo-1" style="width: 1200px; height: 400px">
+<div id="GraficoGoogleChart-ejemplo-2" style="width: 1200px; height: 400px">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+</body>
+</html>
